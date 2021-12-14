@@ -1,5 +1,5 @@
 from string import ascii_letters, digits
-from random import choice
+from random import choice, randint
 from os import path
 
 
@@ -9,10 +9,13 @@ while True:
         break
     except ValueError:
         print("Enter a number!")
-
-
+numbers = []
 chars = list(ascii_letters) + list(digits)
 passwd = []
+
+for i in range(9):
+    numbers.append(randint(0,9))
+
 for i in range(passwd_len):
     passwd.append(choice(chars))
 
